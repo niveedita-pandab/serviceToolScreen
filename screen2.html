@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <!--Sidebar-->
+        <div class="sidebar">
+            <!--Sidebar header-->
+            <div class="sidebar-header">
+                <img src="assets/logo.webp">
+                <h3>Valeo Motherson</h3>
+            </div>
+            <!--Sidebar Menu-->
+            <div class="sidebar-menu">
+                <!-- <h3>MENU</h3> -->
+                <ul>
+                    <li class="inactive">
+                        &nbsp;&nbsp;<span class="fa-solid fa-border-all"></span>&nbsp;&nbsp;&nbsp; <a href="">Dashboard</a>
+                    </li>
+                    <li class="inactive">
+                        &nbsp;&nbsp;<span class="fa-solid fa-money-check-dollar"></span>&nbsp;&nbsp;&nbsp; <a href="">Sales
+                            Order</a>
+                    </li>
+                    <li class="active">
+                        &nbsp;&nbsp;<span class="fa-solid fa-gears"></span>&nbsp;&nbsp;&nbsp; <a href="screen3.html">Installation</a>
+                        <i class="fa-solid fa-chevron-left" style="top:172px"></i>
+                    </li>
+                    <li class="inactive">
+                        &nbsp;&nbsp;<span class="fa-solid fa-calendar-check"></span>&nbsp;&nbsp;&nbsp; <a href="">AMC
+                            Warranty</a>
+                    </li>
+                    <li class="inactive">
+                        &nbsp;&nbsp;<span class="fa-solid fa-hand-holding-hand"></span>&nbsp;&nbsp;&nbsp;
+                        <a href="">Service</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Sidebar Footer-->
+            <div class="sidebar-footer">
+                <ul>
+                    <li>
+                        <span class="fa-solid fa-gear"></span>&nbsp;&nbsp;&nbsp; <a href="">Settings</a>
+                    </li>
+                    <li>
+                        <span class="fa-solid fa-arrow-right-from-bracket"></span>&nbsp;&nbsp;&nbsp; <a href="">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Main Content-->
+        <div class="main-content">
+            <!--Header-->
+            <div class="main-top">
+                <div class="main-header">
+                    <input class="form-control" type="text" placeholder="Search here..."
+                        aria-label="default input example">
+                    <div class="right-stuff">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="assets/color_palette.jpeg" style="height:16px; width:16px;margin-left:0;"> Color
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <img src="assets/colors.png" style="width:218px; height:60px; margin-left:0">
+                                </li>
+                            </ul>
+                        </div>
+                        <i class="fa-regular fa-bell"></i>
+                        <img src="assets/random_dude.jpeg">
+                    </div>
+                </div>
+                <div class="installation">
+                    <h4><b>Installation</b></h4>
+                    <nav class="nav nav-pills flex-column flex-sm-row">
+                        <a class="flex-sm-fill text-sm-center nav-link select" href="#">Unassigned</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" href="#">Assigned</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" href="#">All</a>
+                    </nav>
+                </div>
+            </div>
+            <!--Content-->
+            <div class="main-mid">
+                <!--Invoice-->
+                <div class="card card-1" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="cardheader">
+                            <h4 class="card-title mb-3"><b>Invoice</b></h4>
+                            <div class="entries">
+                                <p><b>Shown</b></p>
+                                <p id="number">03 entries</p>
+                                <input class="form-control" type="text" id="search" placeholder="Search here..."
+                                    aria-label="default input example">
+                            </div>
+                        </div>
+                        <div class="table_border table-responsive">
+                            <table class="table table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Invoice No. <i class="fa-solid fa-sort"></i></th>
+                                        <th scope="col">Invoice Date <i class="fa-solid fa-sort"></i></th>
+                                        <th scope="col">Customer Name <i class="fa-solid fa-sort"></i></th>
+                                        <th scope="col">No. of Units <i class="fa-solid fa-sort"></i></th>
+                                        <th scope="col">Assigned Dealer/Team <i class="fa-solid fa-sort"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>1</td>
+                                        <td>10-JAN-2023</td>
+                                        <td>ABC Auto</td>
+                                        <td>3</td>
+                                        <td><input type="text" value="VMTI/Mr. ABC"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>2</td>
+                                        <td>12-JAN-2023</td>
+                                        <td>ZYX Fabricators</td>
+                                        <td>3</td>
+                                        <td><input type="text" placeholder="----------"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>5</td>
+                                        <td>02-MAR-2024</td>
+                                        <td>ABC Auto</td>
+                                        <td>3</td>
+                                        <td><input type="text" value="ABC Auto/Mr. XYZ"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--Invoice Details-->
+                <div class="card card-2" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="cardheader">
+                            <h4 class="card-title mb-4"><b>Invoice Details</b></h4>
+                            <div class="entries">
+                                <img src="assets/icon.png" style="height:30px; margin-right: 10px;">
+                                <p><b>Shown</b></p>
+                                <p id="number">05 entries</p>
+                                <input class="form-control" type="text" id="search" placeholder="Search here..."
+                                    aria-label="default input example">
+                            </div>
+                        </div>
+                        <div class="table_border table-responsive">
+                            <table class="table table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><i class="fa-solid fa-sort"></i>Invoice No.</th>
+                                        <th scope="col"><i class="fa-solid fa-sort"></i>Unit No.</th>
+                                        <th scope="col"><i class="fa-solid fa-sort"></i>Delivery Date</th>
+                                        <th scope="col"><i class="fa-solid fa-sort"></i>Assigned Dealer/Team</th>
+                                        <th scope="col"><i class="fa-solid fa-sort"></i>Status</th>
+                                        <th scope="col" style="text-align: center;">Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>1</td>
+                                        <td>1234</td>
+                                        <td>21-JAN-2023</td>
+                                        <td><input type="text" value="VMTI/Mr. ABC"></td>
+                                        <td>Missing Parts</td>
+                                        <td style="text-align: center;"><i class="fa-regular fa-eye" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>1</td>
+                                        <td>1111</td>
+                                        <td>21-JAN-2023</td>
+                                        <td><input type="text" value="VMTI/Mr. ABC"></td>
+                                        <td>Installation Complete</td>
+                                        <td style="text-align: center;"><i class="fa-regular fa-eye" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>1</td>
+                                        <td>2222</td>
+                                        <td>21-JAN-2023</td>
+                                        <td><input type="text" value="VMTI/Mr. ABC"></td>
+                                        <td>RSM Assigned</td>
+                                        <td style="text-align: center;"><i class="fa-regular fa-eye" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>1</td>
+                                        <td>1252</td>
+                                        <td>21-JAN-2023</td>
+                                        <td><input type="text" value="VMTI/Mr. ABC"></td>
+                                        <td>Missing Parts</td>
+                                        <td style="text-align: center;"><i class="fa-regular fa-eye" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-caret-right"></i>1</td>
+                                        <td>1236</td>
+                                        <td>21-JAN-2023</td>
+                                        <td><input type="text" value="VMTI/Mr. ABC"></td>
+                                        <td>Missing Parts</td>
+                                        <td style="text-align: center;"><i class="fa-regular fa-eye" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cardfooter">
+                            <p>Showing 1 to 5 entries</p>
+                            <div class="pagenum">
+                                <button type="button" class="btn btn-outline-dark btn-sm" disabled><i
+                                        class="fa-solid fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-outline-dark btn-sm active">1</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm">2</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm">3</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm">4</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm">5</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm"><i
+                                        class="fa-solid fa-chevron-right"></i></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Equipment Details Pop-Up-->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <div class="modalheader">
+                                <div class="top-progress mb-3 mt-4">
+                                    <a class="btn btn-modal open active"><img src="assets/open.png">Open</a>
+                                    <p>  - - - - - - - - - - - - - - - -&nbsp;</p>
+                                    <a class="btn btn-modal assign"><img src="assets/assign.png">Assign Team</a>
+                                    <p>  - - - - - - - - - - - - - - - -&nbsp;</p>
+                                    <a class="btn btn-modal schedule"><img src="assets/schedule.png">Scheduling</a>
+                                    <p>  - - - - - - - - - - - - - - - -&nbsp;</p>
+                                    <a class="btn btn-modal inspection"><img src="assets/inspection.png">Parts Inspection</a>
+                                    <p>  - - - - - - - - - - - - - - - - -&nbsp;</p>
+                                    <a class="btn btn-modal install"><img src="assets/install.png">Installation</a>
+                                    <p>  - - - - - - - - - - - - - - - -&nbsp;</p>
+                                    <a class="btn btn-modal cust_signoff"><img src="assets/cust_signoff.png">Customer Sign-Off</a>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                    <!--Customer Details-->
+                                        <div class="card customer col mb-3"  style="margin-right:10px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><b>Customer Details</b></h5>
+                                                <i class="fa-regular fa-square-caret-down"></i>
+                                                <div class="card-content">
+                                                    <div class="content-1">
+                                                        <div class="field">
+                                                            <input type="text" class="form-control db" id="floatingInput"
+                                                                placeholder="Invoice No" value="12345" disabled>
+                                                            <label for="floatingInput">Invoice No</label>
+                                                            
+                                                        </div>
+                                                        <div class="field" style="margin-right:0">
+                                                            <input type="text" class="form-control db" id="floatingInput"
+                                                                placeholder="Invoice Date" value="10-Jan-2024" disabled>
+                                                            <label for="floatingInput">Invoice Date</label>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="content-1">
+                                                        <div class="field">
+                                                            <input type="text" class="form-control db" id="floatingInput"
+                                                                placeholder="Unit No" value="1111" disabled>
+                                                            <label for="floatingInput">Unit No</label>
+                                                            
+                                                        </div>
+                                                        <div class="field" style="margin-right:0">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="Enter Vehicle No">
+                                                            <label for="floatingInput">Vehicle No</label>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="content-2 mb-3" >
+                                                        <div class="field" style="margin-right:0">
+                                                            <input type="text" class="form-control db" id="floatingInput"
+                                                                id="floatingTextarea2"
+                                                                style="height: 105px" value="CA00125 &nbsp; ABC Transport Corporation, 13, 100 Feet Road, BTM 1st Stage, Bangalore 560078" disabled>
+                                                            <label for="floatingInput">Customer Number & Name</label>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Installaton Details-->
+                                        <div class="card installation col mb-3">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><b>Installation Details</b></h5>
+                                                <i class="fa-regular fa-square-caret-down"></i>
+                                                <div class="card-content">
+                                                    <div class="content-1">
+                                                        <div class="field" style="width:256px;">
+                                                            <input type="text" class="form-control db" id="floatingInput"
+                                                                placeholder="RSM" value="Mr ABC" disabled>
+                                                            <label for="floatingInput">RSM</label>
+                                                        </div>
+                                                        <div class="upload" style="width:256px;">
+                                                            <p><i class="fa-solid fa-cloud-arrow-up" style="font-size: 10px;"></i>&nbsp;&nbsp;Upload a file<p>
+                                                            <p style="color:#767474;">Supported formats: pdf, jpg, png, doc, docx upto 5 MB</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="edit-1">
+                                                        <div class="field sel" >
+                                                            <select type="text" class="form-control" id="floatingInput"
+                                                                placeholder="Installed By" style="border-color:#73D300">
+                                                                <option>Top Body Builders/Mr XYZ</option>
+                                                                <option>Top Body Builders/Mr XYZ</option>
+                                                                <option>Top Body Builders/Mr XYZ</option>
+                                                                <option>Top Body Builders/Mr XYZ</option>
+                                                            </select>
+                                                            <label for="floatingInput">Installed By</label>
+                                                        </div>
+                                                        <div class="field sel" style="margin-right:0">
+                                                            <select type="text" class="form-control" id="floatingInput"
+                                                                placeholder="Inspected By" style="border-color:#73D300">
+                                                                <option>VMTI/Mr GHI</option>
+                                                                <option>VMTI/Mr GHI</option>
+                                                                <option>VMTI/Mr GHI</option>
+                                                                <option>VMTI/Mr GHI</option>
+                                                            </select>
+                                                            <label for="floatingInput">Inspected By</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="edit-1">
+                                                        <div class="field edit">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="Start Date" value="1-May-2024" style="border-color:#FFC000">
+                                                            <label for="floatingInput">Planned Start</label>
+                                                        </div>
+                                                        <div class="field edit" style="margin-right:0">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="End Date" value="31-Dec-2024" style="border-color:#FFC000">
+                                                            <label for="floatingInput">Planned End</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="edit-1">
+                                                        <div class="field edit" style="margin-right:20px">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="Start Date" value="1-Jan-2024" style="border-color:#FFC000">
+                                                            <label for="floatingInput">Actual Start</label>
+                                                        </div>
+                                                        <div class="field edit" style="margin-right:0">
+                                                            <input type="text" class="form-control" id="floatingInput"
+                                                                placeholder="End Date" value="31-Dec-2024" style="border-color:#FFC000">
+                                                            <label for="floatingInput">Actual End</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Equipment Details-->
+                                <div class="card equipment mb-3" style="width: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>Equipment Details</b></h5>
+                                        <i class="fa-regular fa-square-caret-down"></i>
+                                        <div class="table-content">
+                                            <div class="table_border table-responsive">
+                                                <table class="table table-striped table-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">Serial No<i class="fa-solid fa-sort"></i></th>
+                                                            <th scope="col">Status<i class="fa-solid fa-sort"></i></th>
+                                                            <th scope="col">Comments<i class="fa-solid fa-sort"></i></th>
+                                                            <th scope="col" style="text-align:center;">Edit</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Equipment ID</th>
+                                                            <td>2312345</td>
+                                                            <td class="status" style="color:#FFC000;">
+                                                                <div class="dropdown"> Shipped
+                                                                    <button class="btn fa-solid fa-caret-down" type="button" data-bs-toggle="dropdown" >
+                                                                    </button>
+                                                                    <ul class="dropdown-menu dropdown-menu-lg-end" style="overflow-y: visible;">
+                                                                      <li><a class="dropdown-item" href="#">Shipped</a></li>
+                                                                      <li><a class="dropdown-item" href="#">Inspected</a></li>
+                                                                      <li><a class="dropdown-item" href="#">Checked - Missing Parts</a></li>
+                                                                      <li><a class="dropdown-item" href="#">Checked - Damaged Parts</a></li>
+                                                                    </ul>
+                                                                  </div>
+                                                            </td>
+                                                            <td><input type="text" placeholder="Enter start Date"></td>
+                                                            <td style="text-align: center;"><i class="fa-solid fa-pen-to-square"
+                                                                style="color:#177DC0; margin:auto"></i></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Roof Top Kit ID</th>
+                                                            <td>11223344</td>
+                                                            <td class="status" style="color:#73D300;">
+                                                                <div class="dropdown"> Inspected
+                                                                    <button class="btn fa-solid fa-caret-down" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    </button>
+                                                                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                                                                        <li><a class="dropdown-item" href="#">Shipped</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Inspected</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Checked - Missing Parts</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Checked - Damaged Parts</a></li>
+                                                                    </ul>
+                                                                  </div>
+                                                            </td>
+                                                            <td><input type="text" placeholder="Enter start Date"></td>
+                                                            <td style="text-align: center;"><i class="fa-solid fa-pen-to-square"
+                                                                style="color:#177DC0; margin:auto"></i></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Installation Kit ID</th>
+                                                            <td>7654321</td>
+                                                            <td class="status" style="color:#FF2100;">
+                                                                <div class="dropdown"> Missing Parts
+                                                                    <button class="btn fa-solid fa-caret-down" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    </button>
+                                                                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                                                                        <li><a class="dropdown-item" href="#">Shipped</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Inspected</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Checked - Missing Parts</a></li>
+                                                                        <li><a class="dropdown-item" href="#">Checked - Damaged Parts</a></li>
+                                                                    </ul>
+                                                                  </div>
+                                                            </td>
+                                                            <td><input type="text" placeholder="Enter start Date"></td>
+                                                            <td style="text-align: center;"><i class="fa-solid fa-pen-to-square"
+                                                                style="color:#177DC0; margin:auto"></i></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Warranty/AMC Details-->
+                                <div class="card warranty mb-3" style="width: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>Warranty/AMC Details</b></h5>
+                                        <i class="fa-regular fa-square-caret-down"></i>
+                                        <div class="card-content">
+                                            <div class="edit-1" style="margin-bottom: 10px;">
+                                                <div class="field edit" style="margin-right:20px">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="Enter Warranty No">
+                                                    <label for="floatingInput">Warranty No</label>
+                                                </div>
+                                                <div class="field edit" style="margin-right:20px">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="Start Date">
+                                                    <label for="floatingInput">Warranty Start</label>
+                                                </div>
+                                                <div class="field edit" style="margin-right:0">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="End Date">
+                                                    <label for="floatingInput">Warranty End</label>
+                                                </div>
+                                            </div>
+                                            <div class="edit-1" style="margin-bottom: 10px;">
+                                                <div class="field edit" style="margin-right:20px">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="Enter Warranty No">
+                                                    <label for="floatingInput">Extended Warranty No</label>
+                                                </div>
+                                                <div class="field edit" style="margin-right:20px">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="Start Date">
+                                                    <label for="floatingInput">Extended Warranty Start</label>
+                                                </div>
+                                                <i class="fa-solid fa-pen-to-square" style="position:absolute; left:495px;"></i>
+                                                <div class="field edit" style="margin-right:0">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="End Date">
+                                                    <label for="floatingInput">Extended Warranty End</label>
+                                                </div>
+                                            </div>
+                                            <div class="edit-1" style="margin-bottom: 10px;">
+                                                <div class="field edit" style="margin-right:20px">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="Extended AMC No">
+                                                    <label for="floatingInput">AMC No</label>
+                                                </div>
+                                                <div class="field edit" style="margin-right:20px">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="Start Date">
+                                                    <label for="floatingInput">AMC Start</label>
+                                                </div>
+                                                <i class="fa-solid fa-pen-to-square" style="position:absolute; left:495px;"></i>
+                                                <div class="field edit" style="margin-right:0">
+                                                    <input type="text" class="form-control" id="floatingInput"
+                                                        placeholder="End Date">
+                                                    <label for="floatingInput">AMC End</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer" style="box-shadow: #ccc 0px -3px 2px;">
+                                <div class="buttons"  style="height: 56px;">
+                                    <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close" style="margin-top: 9px;">Cancel</button>
+                                    <button type="button" class="btn save" style="margin-top: 9px;">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer-->
+            <div class="footer">
+                <div class="buttons">
+                    <button type="button" class="btn cancel">Cancel</button>
+                    <button type="button" class="btn save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
